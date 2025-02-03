@@ -6,5 +6,7 @@ jobs:
     steps:
       - name: Checkout git hub Code
         uses: actions/checkout@v3
-      - run: echo "Intalling sfdx"
-      - run: npm install SFDX-CLI -g
+      - name: Install SFDX
+        run: |
+             npm install @salesforce/cli --global
+             sf --version
