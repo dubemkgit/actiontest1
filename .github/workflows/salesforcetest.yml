@@ -1,0 +1,10 @@
+name: SFDX-CLI Deploy from repository
+on: push
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout git hub Code
+        uses: action/checkout@v3
+      - run: echo "Intalling sfdx"
+      - run: npm install SFDX-CLI -g
